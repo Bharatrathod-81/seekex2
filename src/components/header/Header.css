@@ -1,0 +1,15 @@
+.header-body{
+    background-color: rgb(199, 61, 61);
+}
+
+.input-container{
+    width: 50%;
+}
+
+.right-side-header{
+    width: 4rem;
+}
+
+.fa-bars{
+    display: none;
+}

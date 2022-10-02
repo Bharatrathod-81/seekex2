@@ -1,0 +1,19 @@
+.card{
+    margin: 1rem 0rem 0.5rem 0rem;
+    position: relative;
+    cursor: pointer;
+}
+.card-img-top{
+    width: 100%;
+    height: 30vh;
+}
+
+.addBtn{
+    display: none !important;
+    position: absolute;
+    width: 100%;
+}
+
+.card:hover .addBtn{
+    display: block !important;
+}

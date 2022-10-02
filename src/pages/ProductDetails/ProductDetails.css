@@ -1,0 +1,12 @@
+.productDetails-body{
+    width: 100%;
+}
+
+.productImg-container{
+    height: 50vh;
+    
+}
+
+.productImg{
+    height: 100% !important;
+}
