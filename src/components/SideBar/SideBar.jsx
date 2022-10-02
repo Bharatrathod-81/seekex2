@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
-export const SideBar = ({ setFilterData }) => {
+export const SideBar = ({ setFilterData, sideBarBtn }) => {
 
     const [Data, setData] = useState([]);
     useEffect(() => {
@@ -38,23 +38,24 @@ export const SideBar = ({ setFilterData }) => {
                         className='category'>Fast Delivery</div>
                 </div>
             </div>
-            <div className='second-sideBar'>
-                <div>
-                    <h5>Category</h5>
-                    {Data?.map(e =>
+            {sideBarBtn &&
+                <div className='second-sideBar'>
+                    <div>
+                        <h5>Category</h5>
+                        {Data?.map(e =>
+                            <div
+                                onClick={() => setFilterData(e)}
+                                className='category'>{e}</div>
+                        )}
+                        <h5>Filter</h5>
                         <div
-                            onClick={() => setFilterData(e)}
-                            className='category'>{e}</div>
-                    )}
-                    <h5>Filter</h5>
-                    <div
-                        onClick={() => setFilterData('col1')}
-                        className='category'>In Stock</div>
-                    <div
-                        onClick={() => setFilterData('F')}
-                        className='category'>Fast Delivery</div>
-                </div>
-            </div>
+                            onClick={() => setFilterData('col1')}
+                            className='category'>In Stock</div>
+                        <div
+                            onClick={() => setFilterData('F')}
+                            className='category'>Fast Delivery</div>
+                    </div>
+                </div>}
         </div>
     )
 };

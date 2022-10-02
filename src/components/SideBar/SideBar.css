@@ -7,12 +7,13 @@
 }
 
 .second-sideBar{
-    background-color: rgba(0, 255, 255, 0.227);
+    background-color: rgba(251, 255, 255, 0.987);
     display: none;
     width: 15rem;
     height: 100vh;
     position: absolute;
-    top: 0%;
+    top: -6px;
+    z-index: 2;
 }
 
 .category{

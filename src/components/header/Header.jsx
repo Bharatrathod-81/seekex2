@@ -1,12 +1,14 @@
 import './Header.css';
 import React from 'react'
 
-export const Header = ({ setFilterData }) => {
+export const Header = ({ setFilterData, setSideBarBtn }) => {
     
     return (
         <div className="card header-body ">
             <div className="card-body d-flex justify-content-between">
-                <div><i className="fa fa-bars" style={{ fontSize: '24px' }}></i></div>
+                <div
+                onClick={() => setSideBarBtn(p => !p)} 
+                ><i className="fa fa-bars" style={{ fontSize: '24px' }}></i></div>
                 <div className='input-container d-flex justify-content-centre'>
                     <div className="input-group ">
                         <div className="input-group input-group-sm">

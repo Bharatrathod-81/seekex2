@@ -28,6 +28,10 @@ a{
   .fa-bars{
     display: block !important;
   }
+
+  .second-sideBar{
+    display: block !important;
+  }
 }
 
 

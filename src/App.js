@@ -9,23 +9,24 @@ const ProductListing = React.lazy(() => import('./pages/ProductListing/ProductLi
 function App() {
   const [filterData, setFilterData] = useState(null);
   const [notify, setNotify] = useState(false)
+  const [sideBarBtn,setSideBarBtn] = useState(false)
 
   const notifyFunc = () => {
     setTimeout(() => {
       setNotify(false)
     },1000)
   };
-  
+
   if(notify){
     notifyFunc()
   };
 
   return (
     <div className="App">
-      <Header setFilterData={setFilterData} />
+      <Header setFilterData={setFilterData} setSideBarBtn={setSideBarBtn}/>
       <div className='d-flex justify-content-between'>
         {notify && <p className='added'>Added</p>}
-        <SideBar setFilterData={setFilterData} />
+        <SideBar setFilterData={setFilterData} sideBarBtn={sideBarBtn}/>
         <Routes>
           {/* Lazy component */}
             <Route path='/' element={
